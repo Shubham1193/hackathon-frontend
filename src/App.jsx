@@ -4,10 +4,11 @@ import Header from './components/Header'
 import { Home } from './pagess/Home'
 import Signin from "./pagess/Signin";
 import Signup from "./pagess/Signup";
-import Quiz from "./pagess/Quiz";
+import GenerateDiet from "./pagess/Diet";
 import PrivateRoute from './components/PrivateRoute';
+import Profile from './pagess/Profile';
 import Dashboard from './pagess/Dashboard';
-import { QuizComp } from './pagess/QuizComp';
+
 
 export default function App() {
   return (
@@ -17,12 +18,10 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/sign-in" element={<Signin />} />
       <Route path="/sign-up" element={<Signup />} />
-      {/* <Route path="/quiz" element={<Quiz />} /> */}
-      <Route path="/QuizDetails" element={<QuizComp />} />
       <Route element={<PrivateRoute/>}>
-        <Route path ='/dashboard' element={<Dashboard/>}/>    
-
-        <Route path="/quiz" element={<Quiz />} />  
+      <Route path ='/profile' element={<Profile/>}/>    
+      <Route path="/generate-diet" element={<GenerateDiet />} />  
+      <Route path="/Dashboard" element={<Dashboard />} />  
         </Route>
       </Routes>
 

@@ -1,35 +1,38 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import step1 from "../assets/step1.jpeg";
-import step2 from "../assets/step2.jpeg";
-import step3 from "../assets/step33.jpeg";
+import food  from "../assets/food.png"
+import step1 from "../assets/step1.png";
+import step2 from "../assets/step2.png";
+
 
 export const Home = () => {
   return (
     <div className=" h-screen">
-      <div className="self-center whitespace-nowrap text-sm sm:text-xl  flex justify-center font-semibold dark:text-white w-[100%] ">
-        <span className="  bg-amber-500 rounded-lg text-white p-4 my-6 md:my-24 text-xl">
-          DietMaster creates personalized diet plans from your ingredient photos, aligning with your health and fitness goals.
+      <div className="self-center whitespace-nowrap text-sm sm:text-xl  flex justify-center font-semibold dark:text-white w-[100vw] my-4 flex flex-wrap flex-row  ">
+        <img src="https://www.pngall.com/wp-content/uploads/5/Healthy-Food-Diet-PNG-Image.png" className="w-[20.333333%] h-1/6 my-4 flex-wrap" />
+        <span className=" text-amber-600 w-2/4 p-4  md:my-24 text-wrap ">
+          Struggling to find the right diet that suits your lifestyle and health goals? Look no further than our Diet Recommendations App. Whether you're aiming to lose weight, gain muscle, or simply eat healthier, our app provides personalized diet plans tailored to your unique needs.
         </span>
       </div>
 
       <div className="self-center whitespace-nowrap text-sm sm:text-xl  flex justify-center font-semibold dark:text-white w-[100%] ">
         <Link
-          to="/Quiz"
+          to="/generate-diet"
           className="px-4  bg-amber-600 rounded-lg text-white p-2 my-4"
         >
           Generate Diet
         </Link>
       </div>
-      <div className="self-center mx-auto whitespace-nowrap  text-sm sm:text-xl my-4 py-4 flex flex-col md:justify-around items-center font-semibold dark:text-white w-[96%] md:h-64 h-[70vh] rounded-sm md:flex-row">
+      <div className="self-center  mx-auto whitespace-nowrap  text-sm sm:text-xl my-2 py-4 flex flex-col md:justify-around items-center font-semibold dark:text-white w-[80%] md:h-64 h-[75vh] rounded-sm md:flex-row">
         <div className="h-full md:w-[20%] w-[60%] mt-4  rounded-lg ">
           <div className="step-title text-center ">Set Details</div>
           <div
-            className="h-[80%] md:w-[100%] w-[100%] mt-4 border-2 rounded-lg"
+            className="h-[100%] md:w-[100%] w-[100%] mt-4 border-2 rounded-lg"
             style={{
               backgroundImage: `url(${step1})`,
-              backgroundSize: "cover",
+              backgroundSize: "contain",
               backgroundPosition: "center",
+              backgroundRepeat : "no-repeat"
             }}
           >
             {" "}
@@ -38,29 +41,18 @@ export const Home = () => {
         <div className="h-full md:w-[20%] w-[60%] mt-4  rounded-lg">
           <div className="step-title text-center">Generate Diet</div>
           <div
-            className="h-[80%] md:w-[100%] w-[100%] mt-4 border-2 rounded-lg"
+            className="h-[100%] md:w-[100%] w-[100%] mt-4 border-2 rounded-lg"
             style={{
               backgroundImage: `url(${step2})`,
-              backgroundSize: "cover",
+              backgroundSize: "contain",
               backgroundPosition: "center",
+              backgroundRepeat : "no-repeat"
             }}
           >
             {" "}
           </div>
         </div>
-        <div className="h-full md:w-[20%] w-[60%] mt-4  rounded-lg">
-          <div className="step-title text-center">Track Progress</div>
-          <div
-            className="h-[80%] md:w-[100%] w-[100%] mt-4 border-2 rounded-lg"
-            style={{
-              backgroundImage: `url(${step3})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            {" "}
-          </div>
-        </div>
+        
       </div>
     </div>
   );
